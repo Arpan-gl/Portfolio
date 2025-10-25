@@ -4,15 +4,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C", "C++", "SQL", "HTML", "CSS", "JavaScript"]
+    skills: ["Python", "C", "C++", "SQL", "HTML", "CSS", "JavaScript","TypeScript","Rust"]
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["TensorFlow", "LangChain", "Scikit-Learn", "Pandas", "FastAPI", "ReactJS", "ExpressJS", "NodeJS", "MongoDB", "NextJS"]
+    skills: ["TensorFlow", "PyTorch", "Anchor", "LangChain", "Scikit-Learn", "Pandas", "FastAPI", "ReactJS", "ExpressJS", "NodeJS", "MongoDB", "NextJS"]
   },
   {
     title: "Tools & Platforms",
-    skills: ["GitHub", "Linux", "Git", "VS Code"]
+    skills: ["GitHub", "Linux", "Git", "VS Code", "Docker", "Kubernetes", "Hugging Face", "GitHub Actions"]
   }
 ];
 

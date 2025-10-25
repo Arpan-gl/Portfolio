@@ -8,21 +8,21 @@ const projects = [
     title: "Deepfake-detector",
     description: "Full-stack web application for multi-modal misinformation detection using advanced AI models. Detects fake news, manipulated images, audio deepfakes, and video forgeries.",
     technologies: ["Full-Stack Development", "AI/ML", "Google Gemini", "Groq LLAMA", "Whisper", "DeepFake Detection"],
-    github: "https://github.com/arpangoyal/deepfake-detector",
+    github: "https://github.com/Arpan-gl/deepfake-detector",
     highlight: "Multi-Modal AI Detection"
   },
   {
     title: "Juris",
     description: "Interactive, AI-powered legal guidance web application recognized as Top 20 in Hackathon. Provides accessible legal information and guidance through modern AI technologies.",
     technologies: ["Modern Frontend", "AI Integration", "GitHub Workflows", "React"],
-    github: "https://github.com/arpangoyal/juris",
+    github: "https://github.com/Arpan-gl/juris",
     highlight: "Top 20 Hackathon"
   },
   {
     title: "Smart Career",
     description: "AI-driven career tool that analyzes GitHub repositories and resumes to generate professional summaries, optimize for ATS systems, and provide personalized interview practice.",
     technologies: ["AI Integration", "Full-Stack Development", "User-Focused Design", "GitHub API"],
-    github: "https://github.com/arpangoyal/smart-career",
+    github: "https://github.com/Arpan-gl/smart-career",
     highlight: "Career Optimization AI"
   }
 ];
