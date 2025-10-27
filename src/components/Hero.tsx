@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -72,6 +72,17 @@ const Hero = () => {
               <a href="mailto:arpang754@gmail.com">
                 <Mail className="w-5 h-5 mr-2" />
                 Email
+              </a>
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
+            >
+              <a href="https://drive.google.com/file/d/1ZPjNREZ6oiAoEhaLxvFXlXrTpVBmcG6X/view?usp=drive_link">
+                <FileText className="w-5 h-5 mr-2" />
+                Resume
               </a>
             </Button>
           </div>
