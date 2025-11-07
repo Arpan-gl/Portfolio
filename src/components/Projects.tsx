@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Juris",
-    description: "Interactive, AI-powered legal guidance web application recognized as Top 20 in Hackathon. Provides accessible legal information and guidance through modern AI technologies.",
+    description: "Interactive, AI-powered legal guidance web application recognized as Top 8 in Hackathon. Provides accessible legal information and guidance through modern AI technologies.",
     technologies: ["Modern Frontend", "AI Integration", "GitHub Workflows", "React"],
     github: "https://github.com/Arpan-gl/juris",
     highlight: "Top 20 Hackathon"
