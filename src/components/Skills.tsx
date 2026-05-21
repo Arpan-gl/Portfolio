@@ -3,16 +3,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skillCategories = [
   {
+    title: "AI / ML",
+    skills: ["PyTorch", "TensorFlow", "Hugging Face", "LangChain", "LangGraph", "Transformers"]
+  },
+  {
+    title: "Backend & Data",
+    skills: ["Node.js", "Express", "FastAPI", "MongoDB", "PostgreSQL", "REST APIs", "Redis"]
+  },
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML", "CSS"]
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "GitHub", "Docker", "GitHub Actions", "Linux", "Postman", "VS Code"]
+  },
+  {
     title: "Languages",
-    skills: ["Python", "C", "C++", "SQL", "HTML", "CSS", "JavaScript","TypeScript","Rust"]
-  },
-  {
-    title: "Frameworks & Libraries",
-    skills: ["TensorFlow", "PyTorch", "Anchor", "LangChain", "Scikit-Learn", "Pandas", "FastAPI", "ReactJS", "ExpressJS", "NodeJS", "MongoDB", "NextJS"]
-  },
-  {
-    title: "Tools & Platforms",
-    skills: ["GitHub", "Linux", "Git", "VS Code", "Docker", "Kubernetes", "Hugging Face", "GitHub Actions"]
+    skills: ["Python", "JavaScript", "TypeScript", "C", "C++", "SQL"]
   }
 ];
 
@@ -21,23 +29,21 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-secondary/20">
       <div className="container max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Technical Skills
-            </span>
+        <div className="mb-16 space-y-4 text-center">
+          <Badge className="bg-primary/10 text-primary hover:bg-primary/10">Skills</Badge>
+          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+            Technical Stack
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Technologies and tools I work with
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            The stack behind the projects above, grouped by the kind of work it supports.
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {skillCategories.map((category, index) => (
             <Card 
               key={index}
-              className="bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]"
+              className="border-border/60 bg-card/70 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
             >
               <CardHeader>
                 <CardTitle className="text-xl text-primary">
@@ -50,7 +56,7 @@ const Skills = () => {
                     <Badge 
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-secondary hover:bg-primary/20 hover:text-primary hover:border-primary/30 border border-border/50 transition-all duration-300"
+                      className="border border-border/60 bg-secondary/50 transition-all duration-300 hover:bg-primary/15 hover:text-primary"
                     >
                       {skill}
                     </Badge>

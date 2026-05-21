@@ -1,29 +1,40 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github, ShieldCheck, Sparkles, Waypoints, Wrench } from "lucide-react";
 
 const projects = [
   {
-    title: "Deepfake-detector",
-    description: "Full-stack web application for multi-modal misinformation detection using advanced AI models. Detects fake news, manipulated images, audio deepfakes, and video forgeries.",
-    technologies: ["Full-Stack Development", "AI/ML", "Google Gemini", "Groq LLAMA", "Whisper", "DeepFake Detection"],
-    github: "https://github.com/Arpan-gl/deepfake-detector",
-    highlight: "Multi-Modal AI Detection"
+    title: "Deepfake Detector",
+    description: "Production-grade multimodal deepfake detection system that combines Whisper, vision models, and Groq or Gemini to detect manipulated media with timestamp-level precision.",
+    technologies: ["Whisper", "Vision Models", "Groq", "Gemini", "React", "Node.js"],
+    github: "https://github.com/Arpan-gl/DeepFake-detector",
+    highlight: "Multimodal AI",
+    icon: ShieldCheck,
   },
   {
-    title: "Juris",
-    description: "Interactive, AI-powered legal guidance web application recognized as Top 8 in Hackathon. Provides accessible legal information and guidance through modern AI technologies.",
-    technologies: ["Modern Frontend", "AI Integration", "GitHub Workflows", "React"],
-    github: "https://github.com/Arpan-gl/juris",
-    highlight: "Top 20 Hackathon"
+    title: "Juris - AI Legal Contract Analyzer",
+    description: "AI-powered legal platform that summarizes contracts, spots risky clauses, compares versions side by side, and answers legal questions in real time.",
+    technologies: ["Gemini", "LangChain", "RAG", "PDF Ingestion", "React", "TypeScript"],
+    github: "https://github.com/Arpan-gl/jurisai",
+    highlight: "Hackathon Finalist",
+    icon: Sparkles,
   },
   {
     title: "Smart Career",
-    description: "AI-driven career tool that analyzes GitHub repositories and resumes to generate professional summaries, optimize for ATS systems, and provide personalized interview practice.",
-    technologies: ["AI Integration", "Full-Stack Development", "User-Focused Design", "GitHub API"],
-    github: "https://github.com/Arpan-gl/smart-career",
-    highlight: "Career Optimization AI"
+    description: "Career intelligence platform that scores resumes, analyzes GitHub profiles, and simulates interviews with structured, role-specific feedback.",
+    technologies: ["ATS Scoring", "GitHub API", "FastAPI", "LangChain", "React", "LLMs"],
+    github: "https://github.com/Arpan-gl/Smart-Career",
+    highlight: "Career Intelligence",
+    icon: Waypoints,
+  },
+  {
+    title: "ResearchForge",
+    description: "Automated ML research CLI that turns a topic into an end-to-end training workflow with dataset discovery, notebook generation, and iterative experiments.",
+    technologies: ["Python", "CLI", "Jupyter", "Automated Research", "Local GPU", "Experimentation"],
+    github: "https://github.com/Arpan-gl/ResearchForge",
+    highlight: "Research Automation",
+    icon: Wrench,
   }
 ];
 
@@ -32,64 +43,53 @@ const Projects = () => {
     <section id="projects" className="py-20 px-6">
       <div className="container max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+        <div className="mb-16 space-y-4 text-center">
+          <Badge className="bg-primary/10 text-primary hover:bg-primary/10">Portfolio</Badge>
+          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+            Selected Work
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building innovative solutions with AI/ML and modern web technologies
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            Four projects from the resume, presented with a cleaner hierarchy and quicker access to the source code.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group relative bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.15)]"
+              className="group relative overflow-hidden border-border/60 bg-card/70 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_60px_hsl(var(--background)/0.45)]"
             >
-              {/* Highlight Badge */}
-              <div className="absolute -top-3 left-6">
-                <Badge className="bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30">
+              <div className="absolute right-5 top-5">
+                <Badge className="border border-primary/30 bg-primary/10 text-primary hover:bg-primary/10">
                   {project.highlight}
                 </Badge>
               </div>
 
               <CardHeader>
-                <div className="flex items-start justify-between gap-4">
-                  <div className="space-y-2 flex-1">
-                    <CardTitle className="text-2xl group-hover:text-primary transition-colors">
+                <div className="space-y-4 pr-16">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
+                    <project.icon className="h-5 w-5" />
+                  </div>
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl transition-colors group-hover:text-primary">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-base text-muted-foreground">
+                    <CardDescription className="text-base leading-7 text-muted-foreground">
                       {project.description}
                     </CardDescription>
                   </div>
-                  <Button
-                    asChild
-                    size="icon"
-                    variant="ghost"
-                    className="shrink-0 hover:bg-primary/10 hover:text-primary"
-                  >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-5 h-5" />
-                    </a>
-                  </Button>
                 </div>
               </CardHeader>
 
               <CardContent>
-                {/* Technologies */}
                 <div className="space-y-3">
-                  <p className="text-sm font-semibold text-primary">Key Technologies:</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Stack</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <Badge 
                         key={techIndex} 
                         variant="secondary"
-                        className="bg-secondary/50 hover:bg-secondary text-foreground border border-border/50"
+                        className="border border-border/60 bg-secondary/45 text-foreground hover:bg-secondary"
                       >
                         {tech}
                       </Badge>
@@ -97,15 +97,19 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* View Project Button */}
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <Button
                     asChild
-                    className="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary transition-all duration-300"
+                    className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       View on GitHub
-                      <ExternalLink className="w-4 h-4 ml-2" />
+                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" size="icon" className="border-border/60 bg-transparent hover:bg-primary/10 hover:text-primary">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} on GitHub`}>
+                      <Github className="h-4 w-4" />
                     </a>
                   </Button>
                 </div>

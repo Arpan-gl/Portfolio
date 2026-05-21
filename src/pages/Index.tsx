@@ -7,14 +7,14 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen overflow-hidden">
       <Hero />
       <Projects />
       <Skills />
       <Education />
       <Contact />
       <Footer />
-    </div>
+    </main>
   );
 };
 

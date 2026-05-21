@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,42 +10,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark cyberpunk theme */
-    --background: 222 47% 7%;
-    --foreground: 210 40% 98%;
+    --background: 24 14% 7%;
+    --foreground: 40 40% 96%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 24 14% 11%;
+    --card-foreground: 40 40% 96%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 24 14% 11%;
+    --popover-foreground: 40 40% 96%;
 
-    /* Electric Blue accent */
-    --primary: 187 100% 42%;
-    --primary-foreground: 222 47% 7%;
+    --primary: 42 86% 62%;
+    --primary-foreground: 24 14% 7%;
 
-    --secondary: 222 47% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 24 10% 16%;
+    --secondary-foreground: 40 40% 96%;
 
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 24 10% 16%;
+    --muted-foreground: 26 10% 68%;
 
-    --accent: 187 100% 42%;
-    --accent-foreground: 222 47% 7%;
+    --accent: 32 70% 56%;
+    --accent-foreground: 24 14% 7%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 47% 20%;
-    --input: 222 47% 15%;
-    --ring: 187 100% 42%;
+    --border: 24 10% 20%;
+    --input: 24 10% 16%;
+    --ring: 42 86% 62%;
 
     --radius: 0.75rem;
     
-    /* Custom portfolio tokens */
-    --glow: 187 100% 50%;
-    --gradient-start: 187 100% 42%;
-    --gradient-end: 217 91% 60%;
+    --glow: 42 86% 62%;
+    --gradient-start: 42 86% 62%;
+    --gradient-end: 26 75% 54%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -63,34 +62,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Same as default for this dark theme */
-    --background: 222 47% 7%;
-    --foreground: 210 40% 98%;
+    --background: 24 14% 7%;
+    --foreground: 40 40% 96%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 24 14% 11%;
+    --card-foreground: 40 40% 96%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 24 14% 11%;
+    --popover-foreground: 40 40% 96%;
 
-    --primary: 187 100% 42%;
-    --primary-foreground: 222 47% 7%;
+    --primary: 42 86% 62%;
+    --primary-foreground: 24 14% 7%;
 
-    --secondary: 222 47% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 24 10% 16%;
+    --secondary-foreground: 40 40% 96%;
 
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 24 10% 16%;
+    --muted-foreground: 26 10% 68%;
 
-    --accent: 187 100% 42%;
-    --accent-foreground: 222 47% 7%;
+    --accent: 32 70% 56%;
+    --accent-foreground: 24 14% 7%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 47% 20%;
-    --input: 222 47% 15%;
-    --ring: 187 100% 42%;
+    --border: 24 10% 20%;
+    --input: 24 10% 16%;
+    --ring: 42 86% 62%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -109,7 +107,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background:
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.08), transparent 28%),
+      radial-gradient(circle at top right, hsl(var(--accent) / 0.08), transparent 30%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
   }
   
   /* Smooth scrolling */
@@ -142,5 +144,10 @@ All colors MUST be HSL.
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--foreground));
   }
 }
